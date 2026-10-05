@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Smart Escape</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="controls">
+        <h2 id="title">Smart Escape Simulator</h2>
+        <button id="lang-toggle" onclick="toggleLang()">বাংলা / English</button>
+        <button id="reset-btn" onclick="resetState()">Reset Hazards</button>
+        <br><br>
+        <label id="start-label" for="start-node">Start Node:</label>
+        <select id="start-node" onchange="calculateRoute()">
+            <option value="">Select Start</option>
+        </select>
+        <p id="help-text" class="help">Click nodes on the map to block/unblock them or close exits.</p>
+        <div class="status-box">
+            <p id="status-text">Status: Ready</p>
+            <p id="route-text">Route: None</p>
+            <p id="cost-text">Total Cost: 0</p>
+        </div>
+    </div>
+    <canvas id="map" width="800" height="400"></canvas>
+    <script src="script.js"></script>
+</body>
+</html>
